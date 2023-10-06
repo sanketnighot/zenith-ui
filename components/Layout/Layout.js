@@ -24,7 +24,7 @@ function Layout({ children }) {
         <div className="max-2xl:fixed max-2xl:z-[12] max-2xl:bottom-0 2xl:hidden text-white bg-sidebar-bg rounded-t-2xl mt-5 p-10 max-h-[344px] w-full">
           <div className="flex flex-col h-full gap-10">
             <h3 className="font-semibold text-xl text-center">
-              By adding Long position, you <br /> can earn 350.54 % APR
+              By adding Long position, you <br /> can earn 350.54 % APR.
             </h3>
             <div className="flex items-center justify-center gap-6">
               <CardBtn
