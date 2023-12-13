@@ -159,7 +159,7 @@ export default function Home() {
           </div>
         </div>
         <div className=" h-[428px] mt-4 w-full rounded-[34px] overflow-hidden dark:bg-lite-sidebar-bg/40 bg-sidebar-bg py-9 text-white dark:text-black">
-          <h2 className="font-bold text-xl mb-5 px-[72px] ">Position Health</h2>
+          <h2 className="font-bold text-xl mb-5 px-[72px] ">Position History</h2>
           <table className="lg:w-full max-lg:w-[calc(100vw-100px)] max-lg:!overflow-x-auto lg:!overflow-y-auto">
             <thead className="font-semibold text-sm">
               <tr className="h-16 border-t border-b border-white">

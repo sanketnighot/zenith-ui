@@ -20,7 +20,7 @@ function Header() {
           <Link href={"/"}>
             <li>Home</li>
           </Link>
-          <Link href={"/tezos"}>
+          <Link href={"/xtz-usdt"}>
             <li>Trade</li>
           </Link>
           <Link href={"/stake"}>
@@ -72,13 +72,16 @@ function Header() {
             </div>
             <div className="flex flex-col gap-8 text-white">
               <div className="flex flex-col">
-                <Link href={"/"}>
+                <Link href={"/xtz-usdt"}>
                   <p className="px-6 py-3">Trade</p>
                 </Link>
-                <hr className="!px-0" />
                 <Link href={"/stake"}>
                   <p className="px-6 py-3">Stake</p>
                 </Link>
+                <Link href={"/leaderboard"}>
+                  <p className="px-6 py-3">Leaderboard</p>
+                </Link>
+                <hr className="!px-0" />
               </div>
               <div className="px-6 flex flex-col gap-4">
                 <Link href={"/"}>

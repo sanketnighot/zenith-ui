@@ -17,27 +17,63 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
               <h2 className=" font-extrabold dark:text-black text-white text-xl">Zenith</h2>
             </div>
           </div>
-          <div className="flex flex-col gap-4 items-center justify-center w-full mt-8 dark:bg-extra-lite-purple">
-            <Link href={"/tezos"}>
-              <SideMenuBtn active={router.asPath == "/tezos"} />
+          <div className="flex flex-col gap-4 items-center justify-center w-full mt-8 dark:bg-extra-lite-purple" scrollable>
+            <Link href={"/xtz-usdt"}>
+              <SideMenuBtn title="Tezos"
+                subtitle="XTZ"
+                icon="tezos.png"
+                alt="tezos"
+                active={router.asPath == "/xtz-usdt"} />
             </Link>
-            <Link href={"/bitcoin"}>
+            <Link href={"/btc-usdt"}>
               <SideMenuBtn
                 title="Bitcoin"
                 subtitle="BTC"
                 icon="bitcoin.png"
                 alt="bitcoin"
-                active={router.asPath == "/bitcoin"}
+                active={router.asPath == "/btc-usdt"}
               />
             </Link>
-            <Link href={"/ethereum"}>
+            <Link href={"/eth-usdt"}>
               <SideMenuBtn
                 title="Ethereum"
                 subtitle="ETH"
                 icon="ethereum.png"
                 alt="ethereum"
-                active={router.asPath == "/ethereum"}
+                active={router.asPath == "/eth-usdt"}
               />
+            </Link>
+            <Link href={"/sol-usdt"}>
+              <SideMenuBtn title="Solana"
+                subtitle="SOL"
+                icon="solana.png"
+                alt="solana"
+                active={router.asPath == "/sol-usdt"} />
+            </Link>
+            <Link href={"/matic-usdt"}>
+              <SideMenuBtn
+                title="Polygon"
+                subtitle="MATIC"
+                icon="polygon.png"
+                alt="polygon"
+                active={router.asPath == "/matic-usdt"}
+              />
+            </Link>
+            <Link href={"/bnb-usdt"}>
+              <SideMenuBtn
+                title="Binance"
+                subtitle="BNB"
+                icon="binance.png"
+                alt="binance"
+                active={router.asPath == "/bnb-usdt"}
+              />
+            </Link>
+            <Link href={"/avax-usdt"}>
+              <SideMenuBtn title="Avalanche"
+                subtitle="AVAX"
+                icon="avalanche.png"
+                alt="avalanche"
+                active={router.asPath == "/avax-usdt"} />
             </Link>
           </div>
         </div>
