@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState("dark");
   const router = useRouter();
   useLayoutEffect(() => {
     setCurrentTheme(theme == "dark" ? "light" : "dark");
