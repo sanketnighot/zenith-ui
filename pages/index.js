@@ -28,10 +28,10 @@ function index() {
           <Link href={"/"}>
             <li>Staking [Soon]</li>
           </Link>
-          <Link href={"https://docs.payperfi.com"}>
+          <Link href={"https://docs.payperfi.com"} target="_blank">
             <li>Docs</li>
           </Link>
-          <Link href={"mailto:support@payeperfi.com"}>
+          <Link href={"mailto:support@payeperfi.com"} target="_blank">
             <li>Support</li>
           </Link>
         </ul>
