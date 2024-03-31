@@ -22,11 +22,11 @@ function index() {
           <Link href={"/"}>
             <li>Home</li>
           </Link>
-          <Link href={"/"}>
-            <li>Trade [Soon]</li>
+          <Link href={"/xtz-usdt"}>
+            <li>Trade</li>
           </Link>
-          <Link href={"/"}>
-            <li>Staking [Soon]</li>
+          <Link href={"/stake"}>
+            <li>Staking</li>
           </Link>
           <Link href={"https://docs.payperfi.com"}>
             <li>Docs</li>
@@ -36,7 +36,7 @@ function index() {
           </Link>
         </ul>
         <button className="w-[152px] font-extrabold h-[40px] rounded-[10px] bg-gradient-to-tr from-[#933FFE] to-[#042CCB]">
-          Launching Soon
+          Whitelist Now
         </button>
       </header>
 
@@ -64,8 +64,8 @@ function index() {
                   Your first perpetual derivaties platform using Virtual Market
                   Maker (VMM) <br /> on Tezos by Payper Finance
                 </p>
-                <Link href="/">
-                  <IndexBtn title={"Launching Soon"} />
+                <Link href="/xtz-usdt">
+                  <IndexBtn title={"Trade Now"} />
                 </Link>
               </div>
             </div>
@@ -180,8 +180,8 @@ function index() {
               1 ꜩ
             </p>
           </div>
-          <Link href="/">
-            <IndexBtn title={"Launching Soon"} />
+          <Link href="/xtz-usdt">
+            <IndexBtn title={"Get Started"} />
           </Link>
         </div>
       </div>
@@ -201,9 +201,9 @@ function index() {
                     market and slippage.
                   </p>
                 </div>
-                <Link href="/">
+                <Link href="/xtz-usdt">
                   <button className="w-[156px] h-[56px] rounded-md border max-lg:text-center border-white">
-                    Launching Soon
+                    Get Started
                   </button>
                 </Link>
               </div>
@@ -281,9 +281,9 @@ function index() {
                   <div className="min-w-[213px]">
                     <img src="/assets/line.png" alt="" />
                   </div>
-                  <Link href="/">
+                  <Link href="/xtz-usdt">
                     <div className="min-w-[134px] flex items-center gap-1">
-                      Launching Soon
+                      Trade Now
                       <svg
                         width="24"
                         height="24"
@@ -378,8 +378,8 @@ function index() {
             <h2 className="font-black text-[50px] max-xl:text-center">
               Take your first step into safe, secure crypto derivatives trading
             </h2>
-            <Link href="/">
-              <IndexBtn title={"Launching Soon"} />
+            <Link href="/xtz-usdt">
+              <IndexBtn title={"Get Started"} />
             </Link>
           </div>
           <img src="/assets/file.png" alt="" />
