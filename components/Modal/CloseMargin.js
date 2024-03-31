@@ -10,12 +10,12 @@ function CloseMargin() {
           <div className="font-bold text-md flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <h3>Expected Close Price: </h3>
-              <p className="text-white dark:text-black">98.01 kUSD</p>
+              <p className="text-white dark:text-black">98.01 USDt</p>
             </div>
             <hr />
             <div className="flex items-center justify-between">
               <h3>Your Profit</h3>
-              <p className="text-green-btn">98.01 kUSD</p>
+              <p className="text-green-btn">98.01 USDt</p>
             </div>
           </div>
 

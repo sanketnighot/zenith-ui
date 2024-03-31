@@ -4,7 +4,7 @@ import TitlePrice from "@/components/utils/TitlePrice";
 
 export default function Home() {
   return (
-    <div className="p-8">
+    <div className="text-[16px] p-8">
       <div className="flex gap-4 text-white  font-semibold">
         <img
           className="w-[60px] h-[60px]"
@@ -21,7 +21,7 @@ export default function Home() {
         <TitlePrice />
         <TitlePrice
           title="Index price"
-          price="2.52 kUSD"
+          price="2.52 USDt"
           subtitleColor="text-white"
         />
         <TitlePrice
@@ -61,7 +61,7 @@ export default function Home() {
           <div className=" font-semibold text-sm flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <h3>Margin</h3>
-              <p>98.01 kUSD</p>
+              <p>98.01 USDt</p>
             </div>
             <div className="flex items-center justify-between">
               <h3>Margin Ratio</h3>
@@ -69,7 +69,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-between">
               <h3>Liquidation Price</h3>
-              <p>98.01 kUSD</p>
+              <p>98.01 USDt</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -91,7 +91,7 @@ export default function Home() {
             <div className=" font-semibold text-sm flex flex-col gap-4 w-[360px]">
               <div className="flex items-center justify-between">
                 <h3>Margin</h3>
-                <p>98.01 kUSD</p>
+                <p>98.01 USDt</p>
               </div>
               <div className="flex items-center justify-between">
                 <h3>Margin Ratio</h3>
@@ -107,7 +107,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between">
                 <h3>Liquidation Price</h3>
-                <p>98.01 kUSD</p>
+                <p>98.01 USDt</p>
               </div>
               <div className="flex items-center justify-end gap-3">
                 <CardBtn title={"+INCREASE"} color={"bg-green-btn"} />
@@ -150,49 +150,49 @@ export default function Home() {
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
             <tr className="h-12">
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
             <tr className="h-12">
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
             <tr className="h-12">
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
             <tr className="h-12">
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
             <tr className="h-12">
               <td>02:00:05</td>
               <td>LONG</td>
               <td>XTZ</td>
-              <td>1.60 kUSD</td>
+              <td>1.60 USDt</td>
               <td>1 XTZ</td>
-              <td>+0.20 kUSD</td>
+              <td>+0.20 USDt</td>
             </tr>
           </tbody>
         </table>

@@ -5,39 +5,84 @@ import CloseMargin from "@/components/Modal/CloseMargin";
 import LongShortModal from "@/components/Modal/LongShortModal";
 import CardBtn from "@/components/utils/CardBtn";
 import TitlePrice from "@/components/utils/TitlePrice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Rodal from "rodal";
-
-export default function Home() {
+import { usePathname } from "next/navigation";
+export default function Home(a, b) {
+  const pathName = usePathname();
   const [showAddModal, setShowAddModal] = useState(false);
   const [showReduceModal, setShowReduceModal] = useState(false);
   const [showIncreaseModal, setShowIncreaseModal] = useState(false);
   const [showDecreaseModal, setShowDecreaseModal] = useState(false);
   const [showCloseModal, setShowCloseModal] = useState(false);
+  const [filterPathName, setFilterPathName] = useState(["",""]);
+
+
+  useEffect(() => {
+    if (pathName) {
+      let pathNameFilter = pathName.replace("/", "").split("-");
+      setFilterPathName([...pathNameFilter]);
+    }
+  }, [pathName]);
+
+  let data = {
+    "xtz":{
+      chainName:"Tezos",
+      chainLogo:"tezos.png"
+    },
+    "btc":{
+      chainName:"Bitcoin",
+      chainLogo:"bitcoin.png"
+    },
+    "eth":{
+      chainName:"Ethereum",
+      chainLogo:"ethereum.png"    
+    },
+    "sol":{
+      chainName:"Solana",
+      chainLogo:"solana.png"
+    },
+    "matic":{
+      chainName:"Polygon",
+      chainLogo:"polygon.png"
+    },
+    "bnb":{
+      chainName:"Binance",
+      chainLogo:"binance.png"
+    },
+    "avax":{
+      chainName:"Avalanche",
+      chainLogo:"avalanche.png"
+    },
+  }
+  
   return (
     <>
-      <div className="p-8">
+      <div className="text-[16px] p-8">
         <div className="flex gap-4 text-white dark:text-black  font-semibold">
           <img
-            className="w-[60px] h-[60px]"
-            src={`/assets/tezos.png`}
-            alt="tezos"
+            className="w-[60px] aspect-square object-contain"
+            src={`/assets/`+ data[filterPathName[0]]?.chainLogo}
+            alt={data[filterPathName[0]]?.chainName}
           />
           <div>
-            <h2 className="text-2xl">XTZ-PREP</h2>
-            <p className="text-xl">Tezos</p>
+            <h2 className="text-2xl uppercase">
+              {filterPathName[0]}-{filterPathName[1]}
+            </h2>
+            <p className="text-xl">{data[filterPathName[0]]?.chainName}</p>
           </div>
         </div>
 
-        <div className="xl:h-[100px] dark:bg-extra-lite-purple max-xl:flex-wrap max-xl:gap-6 w-full bg-purple-card mt-6 rounded-[19px] px-[45px] py-3 flex items-center xl:justify-between">
+        <div className="dark:bg-extra-lite-purple max-xl:flex-wrap w-full bg-purple-card mt-6 rounded-[19px] px-8 py-3 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-8">
+          {/* <div className="flex justify-between items-center flex-[40]"> */}
           <TitlePrice
             title="Mark price"
-            price="1.52 kUSD"
+            price="1.52 USDt"
             subtitleColor="text-white dark:text-black"
           />
           <TitlePrice
             title="Index price"
-            price="2.52 kUSD"
+            price="2.52 USDt"
             subtitleColor="text-white dark:text-black"
           />
           <TitlePrice
@@ -45,6 +90,8 @@ export default function Home() {
             price="16:02"
             subtitleColor="text-white dark:text-black"
           />
+          {/* </div> */}
+          {/* <div className="flex justify-between items-center flex-[40]"> */}
           <TitlePrice
             title="Long funding rate"
             price="0.0056%"
@@ -55,15 +102,16 @@ export default function Home() {
             price="-0.0056%"
             subtitleColor="text-red-btn"
           />
-          <TitlePrice
+          {/* <TitlePrice
             title="Ecpected long/Short Rate"
             price="10.0056%/"
             dualColor="-0.0056%"
             subtitleColor="text-red-btn"
-          />
+          /> */}
+          {/* </div> */}
         </div>
 
-        <div className="h-[374px] dark:bg-lite-sidebar-bg mt-4 w-full flex items-center justify-center rounded-[34px] bg-black-card">
+        <div className="h-[500px] dark:bg-lite-sidebar-bg mt-4 w-full flex items-center justify-center rounded-[34px] bg-black-card">
           {/* <ApexChart /> */}
           <TradingViewWidget />
         </div>
@@ -79,7 +127,7 @@ export default function Home() {
             <div className=" font-semibold text-sm flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <h3>Margin</h3>
-                <p>98.01 kUSD</p>
+                <p>98.01 USDt</p>
               </div>
               <div className="flex items-center justify-between">
                 <h3>Margin Ratio</h3>
@@ -87,7 +135,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between">
                 <h3>Liquidation Price</h3>
-                <p>98.01 kUSD</p>
+                <p>98.01 USDt</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -112,7 +160,9 @@ export default function Home() {
                   <button className="w-[129px] h-[36px] border border-white bg-lite-black-btn rounded-[18px] text-white font-semibold text-md">
                     Long
                   </button>
-                  <p className="font-semibold text-[17px] text-white dark:text-black">+59.2152 BTC</p>
+                  <p className="font-semibold text-[17px] text-white dark:text-black">
+                    +59.2152 BTC
+                  </p>
                 </div>
                 <button
                   onClick={() => setShowCloseModal(!showCloseModal)}
@@ -121,10 +171,10 @@ export default function Home() {
                   CLOSE POSITION
                 </button>
               </div>
-              <div className=" font-semibold text-sm flex flex-col gap-3 w-[450px] ml-10">
+              <div className=" font-semibold text-sm flex flex-col gap-3 w-full xl:max-w-[450px] max-[1279px]:w-[450px] max-lg:w-full lg:ml-10">
                 <div className="flex items-center justify-between">
                   <h3>Margin</h3>
-                  <p>98.01 kUSD</p>
+                  <p>98.01 USDt</p>
                 </div>
                 <div className="flex items-center justify-between">
                   <h3>Margin Ratio</h3>
@@ -140,7 +190,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-between">
                   <h3>Liquidation Price</h3>
-                  <p>98.01 kUSD</p>
+                  <p>98.01 USDt</p>
                 </div>
                 <div className="flex items-center justify-end gap-3">
                   <CardBtn
@@ -158,85 +208,137 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" h-[428px] mt-4 w-full rounded-[34px] overflow-hidden dark:bg-lite-sidebar-bg/40 bg-sidebar-bg py-9 text-white dark:text-black">
-          <h2 className="font-bold text-xl mb-5 px-[72px] ">Position History</h2>
-          <table className="lg:w-full max-lg:w-[calc(100vw-100px)] max-lg:!overflow-x-auto lg:!overflow-y-auto">
-            <thead className="font-semibold text-sm">
-              <tr className="h-16 border-t border-b border-white">
-                <th>TIME</th>
-                <th>DIRECTION</th>
-                <th>SYMBOL</th>
-                <th>
-                  COLLATERAL
-                  <span className="ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
-                    USDC
-                  </span>
-                </th>
-                <th>
-                  POSITION SIZE{" "}
-                  <span className="ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
-                    XTZ
-                  </span>
-                </th>
-                <th>
-                  REALIZED PNL{" "}
-                  <span className="ml-2 px-1.5 h-[17px] rounded-md text-xs bg-lite-purple-btn">
-                    XTZ
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody className="text-center text-sm">
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-              <tr className="h-12">
-                <td>02:00:05</td>
-                <td>LONG</td>
-                <td>XTZ</td>
-                <td>1.60 kUSD</td>
-                <td>1 XTZ</td>
-                <td>+0.20 kUSD</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="relative  mt-4 rounded-[34px]  dark:bg-lite-sidebar-bg/40 bg-sidebar-bg border-8 dark:border-lite-sidebar-bg/10 border-sidebar-bg  text-white dark:text-black">
+          <h2 className="sticky top-0 rounded-t-[34px]  font-bold text-xl px-8 py-4 bg-sidebar-bg dark:bg-[#dec3ff]">
+            Position History
+          </h2>{" "}
+          <div class="overflow-y-auto block max-h-[428px] ">
+            <table class="w-full">
+              <thead class="sticky top-0 dark:bg-[#d0aaff] bg-[#1c163a]">
+                <tr className=" align-top">
+                  <th className="py-5 min-w-[80px]">TIME</th>
+                  <th className="py-5">DIRECTION</th>
+                  <th className="py-5">SYMBOL</th>
+                  <th className="py-5">
+                    COLLATERAL
+                    <span className="block md:inline w-fit mx-auto md:ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
+                      USDC
+                    </span>
+                  </th>
+                  <th className="py-5">
+                    POSITION SIZE{" "}
+                    <span className="block md:inline w-fit mx-auto md:ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
+                      {filterPathName[0]}
+                    </span>
+                  </th>
+                  <th className="py-5">
+                    REALIZED PNL{" "}
+                    <span className="block md:inline w-fit mx-auto md:ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
+                      {filterPathName[0]}
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="max-h-[428px] overflow-y-auto text-center text-sm ">
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+                <tr className="h-12">
+                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[85px] uppercase">
+                    {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px] uppercase">
+                    1 {filterPathName[0]}
+                  </td>
+                  <td className="min-w-[160px]">+0.20 USDt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

@@ -36,7 +36,7 @@ export default function TradingViewWidget() {
           width: "1!rounded-md000%",
           height: "100%",
           autosize: false,
-          symbol: "XTZ/USDT",
+          symbol: "XTZUSDT",
           interval: "D",
           timezone: "exchange",
           theme: "dark",

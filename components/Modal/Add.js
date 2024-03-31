@@ -11,7 +11,7 @@ function AddMargin({ title, btnColor, btnName, marginName }) {
           <div
             className={`h-[50px] items-center justify-between flex px-5 text-white text-xl w-full bg-option-black dark:bg-extra-lite-purple dark:text-black rounded-md`}
           >
-            <img src="/assets/kUsd.png" alt="" />
+            <img className="w-10" src="/assets/USDt.svg" alt="" />
             <input
               placeholder={"1"}
               className="h-full dark:placeholder:text-black text-right bg-transparent w-3/12 outline-none focus:outline-none"
@@ -29,7 +29,7 @@ function AddMargin({ title, btnColor, btnName, marginName }) {
           />
           <div className="flex items-center font-semibold justify-between">
             <h3>{marginName}</h3>
-            <p>98.01 kUSD</p>
+            <p>98.01 USDt</p>
           </div>
 
           <button

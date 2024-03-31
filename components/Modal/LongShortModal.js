@@ -8,7 +8,7 @@ function LongShortModal({ title, positon }) {
       <h3 className="font-black text-white dark:text-black text-[30px]">
         {positon ? title + " " + positon : title}
       </h3>
-      <LongShortAmount title={"kUSD"} text={"Amount"} icon={"kUsd.png"} />
+      <LongShortAmount title={"USDt"} text={"Amount"} icon={"USDt.svg"} />
       <Leverage />
       <div className="flex flex-col gap-5">
         <h3 className="font-black text-[15px] text-white dark:text-black">
@@ -24,8 +24,8 @@ function LongShortModal({ title, positon }) {
         <div className="flex items-center justify-between">
           <p className="font-black text-[15px] text-[#797979] dark:text-black/70">Entry price</p>
           <div className="text-white dark:text-black font-semibold flex items-center gap-2">
-            <p>0 kUSD</p>
-            <img className="w-5" src="/assets/kUsd.png" alt="" />
+            <p>0 USDt</p>
+            <img className="w-5" src="/assets/USDt.svg" alt="" />
           </div>
         </div>
       </div>
@@ -33,11 +33,11 @@ function LongShortModal({ title, positon }) {
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-between">
           <p className="font-black text-[15px] text-[#C0C0C0] dark:text-black/70">Amount</p>
-          <div className="text-white dark:text-black font-semibold text-[13px]">0 kUSD</div>
+          <div className="text-white dark:text-black font-semibold text-[13px]">0 USDt</div>
         </div>
         <div className="flex items-center justify-between">
           <p className="font-black text-[15px] text-[#C0C0C0] dark:text-black/70">Commission</p>
-          <div className="text-white dark:text-black font-semibold text-[13px]">0 kUSD</div>
+          <div className="text-white dark:text-black font-semibold text-[13px]">0 USDt</div>
         </div>
         <div className="flex items-center justify-between">
           <p className="font-black text-[15px] text-[#C0C0C0] dark:text-black/70">Price impact</p>

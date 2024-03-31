@@ -2,7 +2,7 @@ import React from "react";
 
 function TitlePrice({
   title = "Market price",
-  price = "2.402 kUSD",
+  price = "2.402 USDt",
   subtitleColor = "text-green-btn",
   dualColor,
 }) {

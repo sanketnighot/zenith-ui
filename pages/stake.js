@@ -8,7 +8,7 @@ import Head from 'next/head'
 export default function Home() {
   const [selectStack, setSelectedStack] = useState(1);
   return (
-    <div className="p-8 w-[1071px] max-2xl:w-full">
+    <div className="text-[16px] p-8 w-[1071px] max-2xl:w-full">
       <Head>
         <title>Zenith | Staking</title>
       </Head>

@@ -4,26 +4,45 @@ import Rodal from "rodal";
 import LongShortModal from "../Modal/LongShortModal";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
   const router = useRouter();
+  const pathName = usePathname();
+  const [isValidPage, setValidPage] = useState(false);
+
+  useEffect(() => {
+    const _page = ["/", "/leaderboard", "/stake", "/trade"].includes(pathName);
+
+    setValidPage(_page);
+  }, [pathName]);
+
   return (
     <>
       <div className="max-2xl:hidden 2xl:fixed top-0 left-0 bottom-0 bg-primary-bg dark:bg-white h-full">
-        <div className="min-w-[416px] dark:bg-extra-lite-purple max-w-[416px] h-[67%] rounded-tr-2xl rounded-br-2xl bg-sidebar-bg">
+        <div className="min-w-[416px]  max-w-[416px] rounded-tr-2xl rounded-br-2xl ">
           <div className="h-28 dark:bg-lite-purple-btn border-b border-primary-border flex items-center">
             <div className="flex items-center gap-4 ml-4">
               <img className="w-[66px]" src="/assets/zenith-logo.png" alt="" />
-              <h2 className=" font-extrabold dark:text-black text-white text-xl">Zenith</h2>
+              <h2 className=" font-extrabold dark:text-black text-white text-xl">
+                Zenith
+              </h2>
             </div>
           </div>
-          <div className="flex flex-col gap-4 items-center justify-center w-full mt-8 dark:bg-extra-lite-purple" scrollable>
+          <div
+            className={`rounded-br-3xl flex flex-col gap-4  overflow-y-auto ${
+              isValidPage ? `h-[calc(100vh-125px)]` : `h-[calc(100vh-360px)]`
+            } w-full p-6  bg-sidebar-bg dark:bg-extra-lite-purple`}
+          >
             <Link href={"/xtz-usdt"}>
-              <SideMenuBtn title="Tezos"
+              <SideMenuBtn
+                title="Tezos"
                 subtitle="XTZ"
                 icon="tezos.png"
                 alt="tezos"
-                active={router.asPath == "/xtz-usdt"} />
+                active={router.asPath == "/xtz-usdt"}
+              />
             </Link>
             <Link href={"/btc-usdt"}>
               <SideMenuBtn
@@ -44,11 +63,13 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
               />
             </Link>
             <Link href={"/sol-usdt"}>
-              <SideMenuBtn title="Solana"
+              <SideMenuBtn
+                title="Solana"
                 subtitle="SOL"
                 icon="solana.png"
                 alt="solana"
-                active={router.asPath == "/sol-usdt"} />
+                active={router.asPath == "/sol-usdt"}
+              />
             </Link>
             <Link href={"/matic-usdt"}>
               <SideMenuBtn
@@ -69,33 +90,38 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
               />
             </Link>
             <Link href={"/avax-usdt"}>
-              <SideMenuBtn title="Avalanche"
+              <SideMenuBtn
+                title="Avalanche"
                 subtitle="AVAX"
                 icon="avalanche.png"
                 alt="avalanche"
-                active={router.asPath == "/avax-usdt"} />
+                active={router.asPath == "/avax-usdt"}
+              />
             </Link>
           </div>
         </div>
-        <div className="fixed min-w-[416px] max-w-[416px] text-white bg-sidebar-bg dark:text-black dark:bg-lite-sidebar-bg rounded-2xl mt-5 p-10 max-h-[344px] ">
-          <div className="flex flex-col h-full gap-20">
-            <h3 className="font-semibold text-xl text-center">
-              By adding Long position, you <br /> can earn 350.54 % APR
-            </h3>
-            <div className="flex items-center justify-between">
-              <CardBtn
-                onClick={() => setShowLong(!showLong)}
-                title={"Long"}
-                color={"bg-green-btn"}
-              />
-              <CardBtn
-                onClick={() => setShowShort(!showShort)}
-                title={"Short"}
-                color={"bg-red-btn"}
-              />
+
+        {!isValidPage && (
+          <div className="fixed min-w-[416px] max-w-[416px] text-white bg-sidebar-bg dark:text-black dark:bg-lite-sidebar-bg rounded-r-3xl mt-5 p-10 max-h-[344px] ">
+            <div className="flex flex-col h-full gap-10">
+              <h3 className="font-semibold text-xl text-center">
+                By adding Long position, you <br /> can earn 350.54 % APR
+              </h3>
+              <div className="flex items-center justify-between">
+                <CardBtn
+                  onClick={() => setShowLong(!showLong)}
+                  title={"Long"}
+                  color={"bg-green-btn"}
+                />
+                <CardBtn
+                  onClick={() => setShowShort(!showShort)}
+                  title={"Short"}
+                  color={"bg-red-btn"}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
       <Rodal
         customStyles={{
