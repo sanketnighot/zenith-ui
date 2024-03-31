@@ -73,7 +73,7 @@ export default function Home(a, b) {
           </div>
         </div>
 
-        <div className="dark:bg-extra-lite-purple max-xl:flex-wrap w-full bg-purple-card mt-6 rounded-[19px] px-8 py-3 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-8">
+        <div className="dark:bg-extra-lite-purple max-xl:flex-wrap w-full bg-purple-card mt-6 rounded-[19px] px-8 py-3 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-8">
           {/* <div className="flex justify-between items-center flex-[40]"> */}
           <TitlePrice
             title="Mark price"
