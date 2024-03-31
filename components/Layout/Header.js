@@ -8,8 +8,8 @@ import SideMenuBtn from "../utils/SideMenuBtn";
 import { useRouter } from "next/router";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState("dark");
+  const { theme, setTheme } = useTheme("light");
+  const [currentTheme, setCurrentTheme] = useState("light");
   const router = useRouter();
   useLayoutEffect(() => {
     setCurrentTheme(theme == "dark" ? "light" : "dark");

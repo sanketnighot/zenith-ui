@@ -8,7 +8,7 @@ import { ThemeProvider } from "next-themes";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return router.pathname != "/" ? (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <Layout>
         <Head>
           <title>Zenith | Trade</title>
