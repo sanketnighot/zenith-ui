@@ -53,7 +53,7 @@ function index() {
                   <ReactTyped
                     showCursor={false}
                     loop
-                    strings={["#defi", "#derivatives", "#trading"]}
+                    strings={["#defi", "perps","#derivatives", "#trading"]}
                     typeSpeed={120}
                     backSpeed={50}
                   />
