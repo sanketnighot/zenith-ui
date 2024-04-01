@@ -59,7 +59,7 @@ function index() {
                   />
                   {/*<Typist></Typist> */}
                 </span>
-                <br /> clear and simple
+                <br /> accessible to all
               </h2>
               <div className="flex flex-col gap-6">
                 <p className="text-index-hero-p">
