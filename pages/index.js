@@ -35,9 +35,11 @@ function index() {
             <li>Support</li>
           </Link>
         </ul>
+        <Link href={"/xtz-usdt"}>
         <button className="w-[152px] font-extrabold h-[40px] rounded-[10px] bg-gradient-to-tr from-[#933FFE] to-[#042CCB]">
-          Whitelist Now
+          Trade Now
         </button>
+        </Link>
       </header>
 
       {/* hero */}
