@@ -22,21 +22,21 @@ function index() {
           <Link href={"/"}>
             <li>Home</li>
           </Link>
-          <Link href={"/"}>
-            <li>Trade [Soon]</li>
+          <Link href={"/xtz-usdt"}>
+            <li>Trade</li>
           </Link>
-          <Link href={"/"}>
-            <li>Staking [Soon]</li>
+          <Link href={"/stake"}>
+            <li>Staking</li>
           </Link>
-          <Link href={"https://docs.payperfi.com"} target="_blank">
+          <Link href={"https://docs.payperfi.com"}>
             <li>Docs</li>
           </Link>
-          <Link href={"mailto:support@payeperfi.com"} target="_blank">
+          <Link href={"mailto:support@payeperfi.com"}>
             <li>Support</li>
           </Link>
         </ul>
         <button className="w-[152px] font-extrabold h-[40px] rounded-[10px] bg-gradient-to-tr from-[#933FFE] to-[#042CCB]">
-          Launching Soon
+          Whitelist Now
         </button>
       </header>
 
@@ -57,15 +57,15 @@ function index() {
                   />
                   {/*<Typist></Typist> */}
                 </span>
-                <br /> accessible to all
+                <br /> clear and simple
               </h2>
               <div className="flex flex-col gap-6">
                 <p className="text-index-hero-p">
                   Your first perpetual derivaties platform using Virtual Market
                   Maker (VMM) <br /> on Tezos by Payper Finance
                 </p>
-                <Link href="/">
-                  <IndexBtn title={"Launching Soon"} />
+                <Link href="/xtz-usdt">
+                  <IndexBtn title={"Trade Now"} />
                 </Link>
               </div>
             </div>
@@ -180,8 +180,8 @@ function index() {
               1 ꜩ
             </p>
           </div>
-          <Link href="/">
-            <IndexBtn title={"Launching Soon"} />
+          <Link href="/xtz-usdt">
+            <IndexBtn title={"Get Started"} />
           </Link>
         </div>
       </div>
@@ -201,9 +201,9 @@ function index() {
                     market and slippage.
                   </p>
                 </div>
-                <Link href="/">
+                <Link href="/xtz-usdt">
                   <button className="w-[156px] h-[56px] rounded-md border max-lg:text-center border-white">
-                    Launching Soon
+                    Get Started
                   </button>
                 </Link>
               </div>
@@ -281,9 +281,9 @@ function index() {
                   <div className="min-w-[213px]">
                     <img src="/assets/line.png" alt="" />
                   </div>
-                  <Link href="/">
+                  <Link href="/xtz-usdt">
                     <div className="min-w-[134px] flex items-center gap-1">
-                      Launching Soon
+                      Trade Now
                       <svg
                         width="24"
                         height="24"
@@ -378,8 +378,8 @@ function index() {
             <h2 className="font-black text-[50px] max-xl:text-center">
               Take your first step into safe, secure crypto derivatives trading
             </h2>
-            <Link href="/">
-              <IndexBtn title={"Launching Soon"} />
+            <Link href="/xtz-usdt">
+              <IndexBtn title={"Get Started"} />
             </Link>
           </div>
           <img src="/assets/file.png" alt="" />
@@ -474,7 +474,7 @@ function index() {
               </li>
               <li>
                 <Link
-                  href=" https://t.me/Payper_Finance"
+                  href="https://t.me/Payper_Finance"
                   target="_blank"
                   rel="noreferrer"
                   className="transition-colors duration-300  bg-[rgba(10,10,10,0.01)] border-purple-btn border-2 inline-block p-2 rounded-lg hover:bg-purple-btn hover:border-transparent"
@@ -487,8 +487,8 @@ function index() {
                     viewBox="0 0 24 24"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M18.6163 19.919V19.917L18.6345 19.8737L21.6572 4.63385V4.58547C21.6572 4.20548 21.5161 3.87388 21.2117 3.67532C20.9446 3.50094 20.6372 3.48885 20.4215 3.50498C20.2207 3.52314 20.0226 3.5637 19.8309 3.62593C19.7491 3.65229 19.6684 3.68188 19.589 3.71462L19.5759 3.71966L2.72335 10.3306L2.71831 10.3327C2.66708 10.3502 2.61693 10.3707 2.56813 10.3941C2.44828 10.448 2.33329 10.5121 2.22443 10.5856C2.00773 10.7348 1.59549 11.0856 1.66503 11.642C1.72248 12.1036 2.03998 12.3959 2.25467 12.5481C2.38139 12.6369 2.51763 12.7113 2.66086 12.7698L2.69312 12.7839L2.7032 12.787L2.71025 12.79L5.65944 13.7828C5.64936 13.9672 5.6675 14.1557 5.71689 14.3422L7.1935 19.9452C7.27417 20.2507 7.44847 20.5231 7.69194 20.7244C7.93541 20.9257 8.23581 21.0457 8.55095 21.0674C8.86609 21.0892 9.18014 21.0118 9.449 20.8459C9.71786 20.6801 9.92802 20.4342 10.05 20.1428L12.3561 17.6774L16.3162 20.7133L16.3727 20.7375C16.7325 20.8947 17.0681 20.9441 17.3756 20.9028C17.683 20.8604 17.9269 20.7314 18.1103 20.5853C18.3225 20.4133 18.4916 20.1941 18.6042 19.9452L18.6123 19.9281L18.6153 19.9221L18.6163 19.919ZM7.17838 13.9572C7.16203 13.895 7.16592 13.8292 7.18948 13.7694C7.21304 13.7096 7.25505 13.6589 7.30941 13.6245L17.309 7.27462C17.309 7.27462 17.8977 6.9168 17.8765 7.27462C17.8765 7.27462 17.9813 7.33711 17.6658 7.63041C17.3675 7.90961 10.5388 14.5024 9.84737 15.1697C9.80892 15.207 9.78199 15.2546 9.76976 15.3068L8.65499 19.5602L7.17838 13.9572Z"
                     />
                   </svg>

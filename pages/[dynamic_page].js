@@ -212,9 +212,9 @@ export default function Home(a, b) {
           <h2 className="sticky top-0 rounded-t-[34px]  font-bold text-xl px-8 py-4 bg-sidebar-bg dark:bg-[#dec3ff]">
             Position History
           </h2>{" "}
-          <div class="overflow-y-auto block max-h-[428px] ">
-            <table class="w-full">
-              <thead class="sticky top-0 dark:bg-[#d0aaff] bg-[#1c163a]">
+          <div className="overflow-y-auto block max-h-[428px] ">
+            <table className="w-full">
+              <thead className="sticky top-0 dark:bg-[#d0aaff] bg-[#1c163a]">
                 <tr className=" align-top">
                   <th className="py-5 min-w-[80px]">TIME</th>
                   <th className="py-5">DIRECTION</th>
@@ -239,7 +239,7 @@ export default function Home(a, b) {
                   </th>
                 </tr>
               </thead>
-              <tbody class="max-h-[428px] overflow-y-auto text-center text-sm ">
+              <tbody className="max-h-[428px] overflow-y-auto text-center text-sm ">
                 <tr className="h-12">
                   <td className="min-w-[80px]">02:00:05</td>
                   <td className="min-w-[90px]">LONG</td>

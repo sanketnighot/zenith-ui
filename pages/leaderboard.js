@@ -108,9 +108,9 @@ function leaderboard() {
         <h2 className="sticky top-0 z-10 font-bold text-xl px-8 py-4 dark:bg-[#dec3ff] bg-purple-card">
           All Traders
         </h2>
-        <div class="overflow-y-auto block max-h-[600px]">
-          <table class="w-full ">
-            <thead class="sticky top-0 bg-[#774bb1] dark:bg-lite-sidebar-bg">
+        <div className="overflow-y-auto block max-h-[600px]">
+          <table className="w-full ">
+            <thead className="sticky top-0 bg-[#774bb1] dark:bg-lite-sidebar-bg">
               <tr className="align-top">
                 <th className="py-5 min-w-[70px]">Sr. No.</th>
                 <th className="py-5 min-w-[180px]">Wallet Address</th>
@@ -118,7 +118,7 @@ function leaderboard() {
                 <th className="py-5 min-w-[110px]">Total PnL</th>
               </tr>
             </thead>
-            <tbody class="max-h-[450px] overflow-y-auto text-center text-sm ">
+            <tbody className="max-h-[450px] overflow-y-auto text-center text-sm ">
                {leaderboardData.map((entry, index) => (
                 <tr key={index} className="h-12">
                  <td className="min-w-[70px]">{index + 1}</td>
