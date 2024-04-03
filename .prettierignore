@@ -1,0 +1,8 @@
+node_modules/
+*.json
+dist/
+.build
+.next
+.out
+react-tradingview-widget/
+react-typed/
