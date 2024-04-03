@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function CardBtn({ title, color, onClick }) {
   return (
@@ -8,7 +8,7 @@ function CardBtn({ title, color, onClick }) {
     >
       {title}
     </button>
-  );
+  )
 }
 
-export default CardBtn;
+export default CardBtn

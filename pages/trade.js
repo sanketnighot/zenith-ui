@@ -1,6 +1,6 @@
-import ApexChart from "@/components/Chart/Chart";
-import CardBtn from "@/components/utils/CardBtn";
-import TitlePrice from "@/components/utils/TitlePrice";
+import ApexChart from "@/components/Chart/Chart"
+import CardBtn from "@/components/utils/CardBtn"
+import TitlePrice from "@/components/utils/TitlePrice"
 
 export default function Home() {
   return (
@@ -198,5 +198,5 @@ export default function Home() {
         </table>
       </div>
     </div>
-  );
+  )
 }

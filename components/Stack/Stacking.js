@@ -1,7 +1,7 @@
-import React from "react";
-import StackItemList from "../utils/StackItemList";
-import StackBar from "../utils/StackBar";
-import StakeBtn from "../utils/StakeBtn";
+import React from "react"
+import StackItemList from "../utils/StackItemList"
+import StackBar from "../utils/StackBar"
+import StakeBtn from "../utils/StakeBtn"
 
 function Stacking() {
   return (
@@ -14,7 +14,7 @@ function Stacking() {
       </div>
       <StakeBtn title={"STAKE"} />
     </div>
-  );
+  )
 }
 
-export default Stacking;
+export default Stacking

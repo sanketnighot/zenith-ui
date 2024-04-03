@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function TitlePrice({
   title = "Market price",
@@ -17,7 +17,7 @@ function TitlePrice({
         </p>
       )}
     </div>
-  );
+  )
 }
 
-export default TitlePrice;
+export default TitlePrice

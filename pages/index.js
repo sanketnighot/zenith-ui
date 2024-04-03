@@ -1,13 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import Head from "next/head";
+import Link from "next/link"
+import React from "react"
+import Head from "next/head"
 
 /* App Components */
-import Container from "@/components/Index/Container";
-import IndexBtn from "@/components/Index/IndexBtn";
-import StepsCard from "@/components/Index/StepsCard";
-import ReactTyped from "../components/react-typed";
-
+import Container from "@/components/Index/Container"
+import IndexBtn from "@/components/Index/IndexBtn"
+import StepsCard from "@/components/Index/StepsCard"
+import ReactTyped from "../components/react-typed"
 
 function index() {
   return (
@@ -36,9 +35,9 @@ function index() {
           </Link>
         </ul>
         <Link href={"/xtz-usdt"}>
-        <button className="w-[152px] font-extrabold h-[40px] rounded-[10px] bg-gradient-to-tr from-[#933FFE] to-[#042CCB]">
-          Trade Now
-        </button>
+          <button className="w-[152px] font-extrabold h-[40px] rounded-[10px] bg-gradient-to-tr from-[#933FFE] to-[#042CCB]">
+            Trade Now
+          </button>
         </Link>
       </header>
 
@@ -53,7 +52,7 @@ function index() {
                   <ReactTyped
                     showCursor={false}
                     loop
-                    strings={["#defi", "#perps","#derivatives", "#trading"]}
+                    strings={["#defi", "#perps", "#derivatives", "#trading"]}
                     typeSpeed={120}
                     backSpeed={50}
                   />
@@ -578,7 +577,7 @@ function index() {
         </svg>
       </div>
     </div>
-  );
+  )
 }
 
-export default index;
+export default index

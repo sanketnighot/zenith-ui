@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function StackBar({ title, placeholder, claim }) {
   return (
@@ -14,7 +14,7 @@ function StackBar({ title, placeholder, claim }) {
         type="text"
       />
     </div>
-  );
+  )
 }
 
-export default StackBar;
+export default StackBar

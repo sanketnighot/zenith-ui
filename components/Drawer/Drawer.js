@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Drawer({ children, isOpen, setIsOpen }) {
   return (
@@ -23,9 +23,9 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
       <section
         className=" w-screen h-full cursor-pointer"
         onClick={() => {
-          setIsOpen(false);
+          setIsOpen(false)
         }}
       ></section>
     </main>
-  );
+  )
 }

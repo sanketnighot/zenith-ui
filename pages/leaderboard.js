@@ -1,92 +1,92 @@
-import React from "react";
-import Head from "next/head";
+import React from "react"
+import Head from "next/head"
 
 const leaderboardData = [
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "+20%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "SHORT",
-    "totalPnL": "-40%"
- },
- {
-    "walletAddress": "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    "position": "LONG",
-    "totalPnL": "-40%"
- }
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "+20%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "SHORT",
+    totalPnL: "-40%",
+  },
+  {
+    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    position: "LONG",
+    totalPnL: "-40%",
+  },
 ]
 
 function leaderboard() {
@@ -119,12 +119,12 @@ function leaderboard() {
               </tr>
             </thead>
             <tbody className="max-h-[450px] overflow-y-auto text-center text-sm ">
-               {leaderboardData.map((entry, index) => (
+              {leaderboardData.map((entry, index) => (
                 <tr key={index} className="h-12">
-                 <td className="min-w-[70px]">{index + 1}</td>
-                 <td className="min-w-[180px]">{entry.walletAddress}</td>
-                 {/* <td className="min-w-[110px]">{entry.position}</td> */}
-                 <td className="min-w-[110px]">{entry.totalPnL}</td>
+                  <td className="min-w-[70px]">{index + 1}</td>
+                  <td className="min-w-[180px]">{entry.walletAddress}</td>
+                  {/* <td className="min-w-[110px]">{entry.position}</td> */}
+                  <td className="min-w-[110px]">{entry.totalPnL}</td>
                 </tr>
               ))}
             </tbody>
@@ -157,7 +157,7 @@ function leaderboard() {
         </div>
       </div> */}
     </div>
-  );
+  )
 }
 
-export default leaderboard;
+export default leaderboard

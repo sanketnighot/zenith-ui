@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function BurgerMenu({ className }) {
   return (
@@ -14,7 +14,7 @@ function BurgerMenu({ className }) {
       <line y1="7.5" x2="23" y2="7.5" stroke="#DDDDDD" strokeWidth="3" />
       <line y1="13.5" x2="23" y2="13.5" stroke="#DDDDDD" strokeWidth="3" />
     </svg>
-  );
+  )
 }
 
-export default BurgerMenu;
+export default BurgerMenu

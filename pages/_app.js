@@ -1,12 +1,12 @@
-import Layout from "@/components/Layout/Layout";
-import "@/styles/globals.css";
-import "rodal/lib/rodal.css";
-import { useRouter } from "next/router";
-import Head from "next/head";
-import { ThemeProvider } from "next-themes";
+import Layout from "@/components/Layout/Layout"
+import "@/styles/globals.css"
+import "rodal/lib/rodal.css"
+import { useRouter } from "next/router"
+import Head from "next/head"
+import { ThemeProvider } from "next-themes"
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
+  const router = useRouter()
   return router.pathname != "/" ? (
     <ThemeProvider attribute="class" defaultTheme="light">
       <Layout>
@@ -25,5 +25,5 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  );
+  )
 }

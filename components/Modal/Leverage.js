@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 function Leverage() {
-  const [minMax, setMinMax] = useState(1);
+  const [minMax, setMinMax] = useState(1)
   return (
     <div className="min-w-full h-[85px] bg-purple-btn flex flex-col gap-2 justify-center px-2">
       <div className="flex items-center justify-between text-[#AEACAC] dark:text-white font-semibold">
@@ -23,7 +23,7 @@ function Leverage() {
         <p className="text-[13px]">x{minMax}</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default Leverage;
+export default Leverage

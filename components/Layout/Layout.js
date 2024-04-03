@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
-import CardBtn from "../utils/CardBtn";
-import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react"
+import Sidebar from "./Sidebar"
+import Header from "./Header"
+import CardBtn from "../utils/CardBtn"
+import { usePathname } from "next/navigation"
 
 function Layout({ children }) {
-  const [showLong, setShowLong] = useState(false);
-  const [showShort, setShowShort] = useState(false);
-  const pathName = usePathname();
-  const [isValidPage, setValidPage] = useState(false);
+  const [showLong, setShowLong] = useState(false)
+  const [showShort, setShowShort] = useState(false)
+  const pathName = usePathname()
+  const [isValidPage, setValidPage] = useState(false)
 
   useEffect(() => {
-    const _page = ["/", "/leaderboard", "/stake", "/trade"].includes(pathName);
+    const _page = ["/", "/leaderboard", "/stake", "/trade"].includes(pathName)
 
-    setValidPage(_page);
-  }, [pathName]);
+    setValidPage(_page)
+  }, [pathName])
   return (
     <div className="w-full h-screen bg-primary-bg dark:bg-white overflow-hidden">
       <div className="flex">
@@ -26,7 +26,9 @@ function Layout({ children }) {
         />
         <div className="flex flex-col max-2xl:w-screen 2xl:fixed 2xl:left-[416px] 2xl:right-0">
           <Header />
-          <div className={`overflow-x-hidden ${isValidPage ? `max-2xl:pb-4` : `max-2xl:pb-56`} !overflow-y-auto h-[calc(100vh-100px)]`}>
+          <div
+            className={`overflow-x-hidden ${isValidPage ? `max-2xl:pb-4` : `max-2xl:pb-56`} !overflow-y-auto h-[calc(100vh-100px)]`}
+          >
             {children}
           </div>
         </div>
@@ -53,7 +55,7 @@ function Layout({ children }) {
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

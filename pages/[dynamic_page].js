@@ -1,68 +1,67 @@
-import ApexChart from "@/components/Chart/Chart";
-import TradingViewWidget from "@/components/Chart/TradingViewWidgets";
-import Add from "@/components/Modal/Add";
-import CloseMargin from "@/components/Modal/CloseMargin";
-import LongShortModal from "@/components/Modal/LongShortModal";
-import CardBtn from "@/components/utils/CardBtn";
-import TitlePrice from "@/components/utils/TitlePrice";
-import { useEffect, useState } from "react";
-import Rodal from "rodal";
-import { usePathname } from "next/navigation";
+import ApexChart from "@/components/Chart/Chart"
+import TradingViewWidget from "@/components/Chart/TradingViewWidgets"
+import Add from "@/components/Modal/Add"
+import CloseMargin from "@/components/Modal/CloseMargin"
+import LongShortModal from "@/components/Modal/LongShortModal"
+import CardBtn from "@/components/utils/CardBtn"
+import TitlePrice from "@/components/utils/TitlePrice"
+import { useEffect, useState } from "react"
+import Rodal from "rodal"
+import { usePathname } from "next/navigation"
 export default function Home(a, b) {
-  const pathName = usePathname();
-  const [showAddModal, setShowAddModal] = useState(false);
-  const [showReduceModal, setShowReduceModal] = useState(false);
-  const [showIncreaseModal, setShowIncreaseModal] = useState(false);
-  const [showDecreaseModal, setShowDecreaseModal] = useState(false);
-  const [showCloseModal, setShowCloseModal] = useState(false);
-  const [filterPathName, setFilterPathName] = useState(["",""]);
-
+  const pathName = usePathname()
+  const [showAddModal, setShowAddModal] = useState(false)
+  const [showReduceModal, setShowReduceModal] = useState(false)
+  const [showIncreaseModal, setShowIncreaseModal] = useState(false)
+  const [showDecreaseModal, setShowDecreaseModal] = useState(false)
+  const [showCloseModal, setShowCloseModal] = useState(false)
+  const [filterPathName, setFilterPathName] = useState(["", ""])
 
   useEffect(() => {
     if (pathName) {
-      let pathNameFilter = pathName.replace("/", "").split("-");
-      setFilterPathName([...pathNameFilter]);
+      let pathNameFilter = pathName.replace("/", "").split("-")
+      setFilterPathName([...pathNameFilter])
     }
-  }, [pathName]);
+  }, [pathName])
 
   let data = {
-    "xtz":{
-      chainName:"Tezos",
-      chainLogo:"tezos.png"
+    xtz: {
+      chainName: "Tezos",
+      chainLogo: "tezos.png",
     },
-    "btc":{
-      chainName:"Bitcoin",
-      chainLogo:"bitcoin.png"
+    btc: {
+      chainName: "Bitcoin",
+      chainLogo: "bitcoin.png",
     },
-    "eth":{
-      chainName:"Ethereum",
-      chainLogo:"ethereum.png"    
+    eth: {
+      chainName: "Ethereum",
+      chainLogo: "ethereum.png",
     },
-    "sol":{
-      chainName:"Solana",
-      chainLogo:"solana.png"
+    sol: {
+      chainName: "Solana",
+      chainLogo: "solana.png",
     },
-    "matic":{
-      chainName:"Polygon",
-      chainLogo:"polygon.png"
+    matic: {
+      chainName: "Polygon",
+      chainLogo: "polygon.png",
     },
-    "bnb":{
-      chainName:"Binance",
-      chainLogo:"binance.png"
+    bnb: {
+      chainName: "Binance",
+      chainLogo: "binance.png",
     },
-    "avax":{
-      chainName:"Avalanche",
-      chainLogo:"avalanche.png"
+    avax: {
+      chainName: "Avalanche",
+      chainLogo: "avalanche.png",
     },
   }
-  
+
   return (
     <>
       <div className="text-[16px] p-8">
         <div className="flex gap-4 text-white dark:text-black  font-semibold">
           <img
             className="w-[60px] aspect-square object-contain"
-            src={`/assets/`+ data[filterPathName[0]]?.chainLogo}
+            src={`/assets/` + data[filterPathName[0]]?.chainLogo}
             alt={data[filterPathName[0]]?.chainName}
           />
           <div>
@@ -430,5 +429,5 @@ export default function Home(a, b) {
         <LongShortModal positon={"Position"} title={"Decrease"} />
       </Rodal>
     </>
-  );
+  )
 }

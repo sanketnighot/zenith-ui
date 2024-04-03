@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 // import ReactApexChart from "react-apexcharts";
-import dynamic from "next/dynamic";
-import "apexcharts/dist/apexcharts.css";
+import dynamic from "next/dynamic"
+import "apexcharts/dist/apexcharts.css"
 
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 const seriesData = [
   [1327359600000, 30.95],
   [1327446000000, 31.34],
@@ -280,11 +280,11 @@ const seriesData = [
   [1361746800000, 38.11],
   [1361833200000, 38.59],
   [1361919600000, 39.6],
-];
+]
 const formattedDataSeries = seriesData.map(([timestamp, value]) => [
   new Date(timestamp),
   value,
-]);
+])
 const ApexChart = () => {
   const series = [
     {
@@ -531,7 +531,7 @@ const ApexChart = () => {
         },
       ],
     },
-  ];
+  ]
 
   const options = {
     chart: {
@@ -568,7 +568,7 @@ const ApexChart = () => {
             colors: "#fff",
           },
           formatter: function (value) {
-            return value + "%";
+            return value + "%"
           },
         },
         tooltip: {
@@ -581,13 +581,18 @@ const ApexChart = () => {
         format: "MMM yyyy",
       },
     },
-  };
+  }
 
   return (
     <div id="chart-timeline" className="w-full mt-3">
-      <Chart options={options} series={series} type="candlestick" height={360} />
+      <Chart
+        options={options}
+        series={series}
+        type="candlestick"
+        height={360}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default ApexChart;
+export default ApexChart

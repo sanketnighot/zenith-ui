@@ -1,22 +1,22 @@
-import SideMenuBtn from "../utils/SideMenuBtn";
-import CardBtn from "../utils/CardBtn";
-import Rodal from "rodal";
-import LongShortModal from "../Modal/LongShortModal";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import SideMenuBtn from "../utils/SideMenuBtn"
+import CardBtn from "../utils/CardBtn"
+import Rodal from "rodal"
+import LongShortModal from "../Modal/LongShortModal"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
-  const router = useRouter();
-  const pathName = usePathname();
-  const [isValidPage, setValidPage] = useState(false);
+  const router = useRouter()
+  const pathName = usePathname()
+  const [isValidPage, setValidPage] = useState(false)
 
   useEffect(() => {
-    const _page = ["/", "/leaderboard", "/stake", "/trade"].includes(pathName);
+    const _page = ["/", "/leaderboard", "/stake", "/trade"].includes(pathName)
 
-    setValidPage(_page);
-  }, [pathName]);
+    setValidPage(_page)
+  }, [pathName])
 
   return (
     <>
@@ -148,7 +148,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
         <LongShortModal title={"Short"} />
       </Rodal>
     </>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function StepsCard({ img, step, subDescTop, subDescBottom }) {
   return (
@@ -9,7 +9,7 @@ function StepsCard({ img, step, subDescTop, subDescBottom }) {
         {subDescTop} <br /> {subDescBottom}
       </p>
     </div>
-  );
+  )
 }
 
-export default StepsCard;
+export default StepsCard

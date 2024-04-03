@@ -1,12 +1,12 @@
-import Claiming from "@/components/Stack/Claiming";
-import Stacking from "@/components/Stack/Stacking";
-import Unstaking from "@/components/Stack/Unstaking";
-import StakeBtn from "@/components/utils/StakeBtn";
-import { useState } from "react";
-import Head from 'next/head'
+import Claiming from "@/components/Stack/Claiming"
+import Stacking from "@/components/Stack/Stacking"
+import Unstaking from "@/components/Stack/Unstaking"
+import StakeBtn from "@/components/utils/StakeBtn"
+import { useState } from "react"
+import Head from "next/head"
 
 export default function Home() {
-  const [selectStack, setSelectedStack] = useState(1);
+  const [selectStack, setSelectedStack] = useState(1)
   return (
     <div className="text-[16px] p-8 w-[1071px] max-2xl:w-full">
       <Head>
@@ -25,15 +25,21 @@ export default function Home() {
             <div className="font-bold text-white dark:text-black">1039 PPR</div>
           </div>
           <div className="flex flex-col gap-8 text-xl">
-            <div className="text-mute-text font-semibold dark:text-black/80">Staked balance</div>
+            <div className="text-mute-text font-semibold dark:text-black/80">
+              Staked balance
+            </div>
             <div className="font-bold text-white dark:text-black">2000 PPR</div>
           </div>
           <div className="flex flex-col gap-8 text-xl">
-            <div className="text-mute-text font-semibold dark:text-black/80">APY</div>
+            <div className="text-mute-text font-semibold dark:text-black/80">
+              APY
+            </div>
             <div className="font-bold text-white dark:text-black">7.81%</div>
           </div>
           <div className="flex flex-col gap-8 text-xl">
-            <div className="text-mute-text font-semibold dark:text-black/80">Total profit</div>
+            <div className="text-mute-text font-semibold dark:text-black/80">
+              Total profit
+            </div>
             <div className="font-bold text-white dark:text-black">10 USDT</div>
           </div>
         </div>
@@ -42,22 +48,28 @@ export default function Home() {
         <div className="bg-lite-black dark:bg-lite-sidebar-bg dark:text-black text-white rounded-[18px] h-[407px] w-full p-8 flex flex-col gap-6">
           <div className="font-semibold text-xl text-white dark:text-black flex items-center gap-10">
             <button
-              className={`${selectStack == 1 && "border-b-[3px] border-purple-btn dark:border-b-black "
-                } pb-2`}
+              className={`${
+                selectStack == 1 &&
+                "border-b-[3px] border-purple-btn dark:border-b-black "
+              } pb-2`}
               onClick={() => setSelectedStack(1)}
             >
               Staking
             </button>
             <button
-              className={`${selectStack == 2 && "border-b-[3px] border-purple-btn dark:border-b-black "
-                } pb-2`}
+              className={`${
+                selectStack == 2 &&
+                "border-b-[3px] border-purple-btn dark:border-b-black "
+              } pb-2`}
               onClick={() => setSelectedStack(2)}
             >
               Unstaking
             </button>
             <button
-              className={`${selectStack == 3 && "border-b-[3px] border-purple-btn dark:border-b-black "
-                } pb-2`}
+              className={`${
+                selectStack == 3 &&
+                "border-b-[3px] border-purple-btn dark:border-b-black "
+              } pb-2`}
               onClick={() => setSelectedStack(3)}
             >
               Claiming
@@ -95,5 +107,5 @@ export default function Home() {
         </p>
       </div>
     </div>
-  );
+  )
 }

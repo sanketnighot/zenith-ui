@@ -30,7 +30,7 @@ function CloseMargin() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default CloseMargin;
+export default CloseMargin

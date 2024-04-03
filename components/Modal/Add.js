@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 function AddMargin({ title, btnColor, btnName, marginName }) {
-  const [minMax, setMinMax] = useState(1);
+  const [minMax, setMinMax] = useState(1)
 
   return (
     <div className="h-fit w-full bg-lite-black dark:bg-white rounded-[18px] flex items-center gap-5 mt-10 max-2xl:h-full max-2xl:flex-col">
@@ -40,7 +40,7 @@ function AddMargin({ title, btnColor, btnName, marginName }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default AddMargin;
+export default AddMargin

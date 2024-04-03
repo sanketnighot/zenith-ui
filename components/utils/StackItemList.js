@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function StackItemList({ title, text }) {
   return (
@@ -8,7 +8,7 @@ function StackItemList({ title, text }) {
         <span className="text-green-btn dark:text-white">{text}</span> USDT
       </div>
     </div>
-  );
+  )
 }
 
-export default StackItemList;
+export default StackItemList

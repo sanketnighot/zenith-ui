@@ -1,30 +1,30 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react"
 
-let tvScriptLoadingPromise;
+let tvScriptLoadingPromise
 
 export default function TradingViewWidget() {
-  const onLoadScriptRef = useRef();
+  const onLoadScriptRef = useRef()
 
   useEffect(() => {
-    onLoadScriptRef.current = createWidget;
+    onLoadScriptRef.current = createWidget
 
     if (!tvScriptLoadingPromise) {
       tvScriptLoadingPromise = new Promise((resolve) => {
-        const script = document.createElement("script");
-        script.id = "tradingview-widget-loading-script";
-        script.src = "https://s3.tradingview.com/tv.js";
-        script.type = "text/javascript";
-        script.onload = resolve;
+        const script = document.createElement("script")
+        script.id = "tradingview-widget-loading-script"
+        script.src = "https://s3.tradingview.com/tv.js"
+        script.type = "text/javascript"
+        script.onload = resolve
 
-        document.head.appendChild(script);
-      });
+        document.head.appendChild(script)
+      })
     }
 
     tvScriptLoadingPromise.then(
       () => onLoadScriptRef.current && onLoadScriptRef.current()
-    );
+    )
 
-    return () => (onLoadScriptRef.current = null);
+    return () => (onLoadScriptRef.current = null)
 
     function createWidget() {
       if (
@@ -50,10 +50,10 @@ export default function TradingViewWidget() {
           popup_width: "1000",
           popup_height: "650",
           locale: "en",
-        });
+        })
       }
     }
-  }, []);
+  }, [])
 
   return (
     <div className="tradingview-widget-container !w-[98%]">
@@ -66,5 +66,5 @@ export default function TradingViewWidget() {
         ></a>
       </div>
     </div>
-  );
+  )
 }

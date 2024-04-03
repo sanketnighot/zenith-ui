@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function IconBtn({
   title = "CONNECT WALLET",
@@ -28,7 +28,7 @@ function IconBtn({
         </div>
       </div>
     </button>
-  );
+  )
 }
 
-export default IconBtn;
+export default IconBtn

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function LongShortAmount({ title, text, icon }) {
   return (
@@ -7,9 +7,12 @@ function LongShortAmount({ title, text, icon }) {
         <img className="w-[30px]" src={`/assets/${icon}`} alt="" />
         <p>{title}</p>
       </div>
-      <input placeholder="Amount" className="text-white text-xl outline-none bg-purple-btn focus:outline font-normal h-full w-1/4"/>
+      <input
+        placeholder="Amount"
+        className="text-white text-xl outline-none bg-purple-btn focus:outline font-normal h-full w-1/4"
+      />
     </div>
-  );
+  )
 }
 
-export default LongShortAmount;
+export default LongShortAmount

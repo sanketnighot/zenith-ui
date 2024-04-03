@@ -1,33 +1,33 @@
-import Link from "next/link";
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import IconBtn from "../utils/IconBtn";
-import BurgerMenu from "../Svg/BurgerMenu";
-import Drawer from "../Drawer/Drawer";
-import { useTheme } from "next-themes";
-import SideMenuBtn from "../utils/SideMenuBtn";
-import { useRouter } from "next/router";
+import Link from "next/link"
+import React, { useEffect, useLayoutEffect, useState } from "react"
+import IconBtn from "../utils/IconBtn"
+import BurgerMenu from "../Svg/BurgerMenu"
+import Drawer from "../Drawer/Drawer"
+import { useTheme } from "next-themes"
+import SideMenuBtn from "../utils/SideMenuBtn"
+import { useRouter } from "next/router"
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme("light");
-  const [currentTheme, setCurrentTheme] = useState("light");
-  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false)
+  const { theme, setTheme } = useTheme("light")
+  const [currentTheme, setCurrentTheme] = useState("light")
+  const router = useRouter()
   useLayoutEffect(() => {
-    setCurrentTheme(theme == "dark" ? "light" : "dark");
-  }, [theme]);
+    setCurrentTheme(theme == "dark" ? "light" : "dark")
+  }, [theme])
 
   useEffect(() => {
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", ({ matches }) => {
         if (matches) {
-          setTheme("dark");
+          setTheme("dark")
           // console.log("change to dark mode!");
         } else {
-          setTheme("light");
+          setTheme("light")
           // console.log("change to light mode!");
         }
-      });
-  }, []);
+      })
+  }, [])
   return (
     <>
       <nav className="!text-[16px] shadow-xlx text-white dark:text-black dark:bg-lite-sidebar-bg h-28 border-b border-primary-border flex items-center justify-between w-full font-semibold  max-2xl:px-8 2xl:pr-20">
@@ -197,7 +197,7 @@ function Header() {
         </div>
       </Drawer>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header

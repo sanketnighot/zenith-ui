@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function SideMenuBtn({
   icon = "tezos.png",
@@ -27,7 +27,7 @@ function SideMenuBtn({
       </div>
       <h2 className="text-xl">{amount}</h2>
     </button>
-  );
+  )
 }
 
-export default SideMenuBtn;
+export default SideMenuBtn
