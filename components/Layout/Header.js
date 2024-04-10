@@ -6,6 +6,7 @@ import Drawer from "../Drawer/Drawer"
 import { useTheme } from "next-themes"
 import SideMenuBtn from "../utils/SideMenuBtn"
 import { useRouter } from "next/router"
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, setTheme } = useTheme("light")
@@ -77,7 +78,7 @@ function Header() {
               alt=""
             />
           </div>
-          <IconBtn />
+          <IconBtn title="tz2VENv...rwjTYk" />
         </div>
         <img
           className="w-[45px] 2xl:hidden"
@@ -102,7 +103,7 @@ function Header() {
             <div className="px-6 py-3 space-y-3">
               <div className="flex items-center gap-2">
                 <img src="/assets/wallet-icon.png" alt="" />
-                <p>3Mw1vp.....G6ikCDH4</p>
+                <p>tz2VENv...rwjTYk</p>
               </div>
 
               <div className="flex gap-x-4">

@@ -76,12 +76,12 @@ export default function Home(a, b) {
           {/* <div className="flex justify-between items-center flex-[40]"> */}
           <TitlePrice
             title="Mark price"
-            price="1.52 USDt"
+            price="0.92 USDt"
             subtitleColor="text-white dark:text-black"
           />
           <TitlePrice
             title="Index price"
-            price="2.52 USDt"
+            price="1.25 USDt"
             subtitleColor="text-white dark:text-black"
           />
           <TitlePrice
@@ -126,16 +126,16 @@ export default function Home(a, b) {
             <div className=" font-semibold text-sm flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <h3>Margin</h3>
-                <p>98.01 USDt</p>
+                <p>104.01 USDt</p>
               </div>
               <div className="flex items-center justify-between">
                 <h3>Margin Ratio</h3>
-                <p>0.001</p>
+                <p>0.3233</p>
               </div>
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <h3>Liquidation Price</h3>
                 <p>98.01 USDt</p>
-              </div>
+              </div> */}
             </div>
             <div className="flex items-center gap-3">
               <CardBtn
@@ -160,7 +160,7 @@ export default function Home(a, b) {
                     Long
                   </button>
                   <p className="font-semibold text-[17px] text-white dark:text-black">
-                    +59.2152 BTC
+                    +59.2152 USDt
                   </p>
                 </div>
                 <button
@@ -172,24 +172,24 @@ export default function Home(a, b) {
               </div>
               <div className=" font-semibold text-sm flex flex-col gap-3 w-full xl:max-w-[450px] max-[1279px]:w-[450px] max-lg:w-full lg:ml-10">
                 <div className="flex items-center justify-between">
-                  <h3>Margin</h3>
-                  <p>98.01 USDt</p>
+                  <h3>Entry Price</h3>
+                  <p>0.84 USDt</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3>Margin Ratio</h3>
-                  <p>0.001</p>
+                  <h3>Close Price</h3>
+                  <p>0.93 USDt</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3>Margin Ratio</h3>
-                  <p>0.001</p>
+                  <h3>Expected Close Price</h3>
+                  <p>0.96 USDt</p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3>Margin Ratio</h3>
-                  <p>0.001</p>
+                  <h3>Net Funding</h3>
+                  <p>23.55 USDt</p>
                 </div>
                 <div className="flex items-center justify-between">
                   <h3>Liquidation Price</h3>
-                  <p>98.01 USDt</p>
+                  <p>0.74 USDt</p>
                 </div>
                 <div className="flex items-center justify-end gap-3">
                   <CardBtn
@@ -221,7 +221,7 @@ export default function Home(a, b) {
                   <th className="py-5">
                     COLLATERAL
                     <span className="block md:inline w-fit mx-auto md:ml-2 px-1.5 h-[17px] rounded-md text-xs dark:text-white bg-lite-purple-btn">
-                      USDC
+                      USDt
                     </span>
                   </th>
                   <th className="py-5">
@@ -240,100 +240,40 @@ export default function Home(a, b) {
               </thead>
               <tbody className="max-h-[428px] overflow-y-auto text-center text-sm ">
                 <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[80px]">12:00</td>
                   <td className="min-w-[90px]">LONG</td>
                   <td className="min-w-[85px] uppercase">
                     {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px]">200 USDt</td>
                   <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
+                    194.23 {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
+                  <td className="min-w-[160px] text-green-400">+67.20 USDt</td>
                 </tr>
                 <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
+                  <td className="min-w-[80px]">02:00</td>
+                  <td className="min-w-[90px]">SHORT</td>
                   <td className="min-w-[85px] uppercase">
                     {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px]">450 USDt</td>
                   <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
+                    465 {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
+                  <td className="min-w-[160px] text-green-400">+32.41 USDt</td>
                 </tr>
                 <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
+                  <td className="min-w-[80px]">17:00</td>
                   <td className="min-w-[90px]">LONG</td>
                   <td className="min-w-[85px] uppercase">
                     {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
+                  <td className="min-w-[160px]">240 USDt</td>
                   <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
+                    235 {filterPathName[0]}
                   </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
-                </tr>
-                <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
-                  <td className="min-w-[85px] uppercase">
-                    {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
-                  <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
-                </tr>
-                <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
-                  <td className="min-w-[85px] uppercase">
-                    {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
-                  <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
-                </tr>
-                <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
-                  <td className="min-w-[85px] uppercase">
-                    {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
-                  <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
-                </tr>
-                <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
-                  <td className="min-w-[85px] uppercase">
-                    {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
-                  <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
-                </tr>
-                <tr className="h-12">
-                  <td className="min-w-[80px]">02:00:05</td>
-                  <td className="min-w-[90px]">LONG</td>
-                  <td className="min-w-[85px] uppercase">
-                    {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">1.60 USDt</td>
-                  <td className="min-w-[160px] uppercase">
-                    1 {filterPathName[0]}
-                  </td>
-                  <td className="min-w-[160px]">+0.20 USDt</td>
+                  <td className="min-w-[160px] text-red-400"> -53.82 USDt</td>
                 </tr>
               </tbody>
             </table>

@@ -5,87 +5,32 @@ const leaderboardData = [
   {
     walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
     position: "LONG",
-    totalPnL: "+20%",
+    totalPnL: "+20.12 %",
+    color: "text-green-400",
   },
   {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    walletAddress: "tz1NXUXCPwsQMHGCpdz8d1HowSp7WjNRvWth",
     position: "SHORT",
-    totalPnL: "-40%",
+    totalPnL: "+17.56 %",
+    color: "text-green-400",
   },
   {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    walletAddress: "tz2Mm9RrK5H2QiLhRM8E2DvrQ2pcc88B5Cx2",
     position: "SHORT",
-    totalPnL: "-40%",
+    totalPnL: "+4.37 %",
+    color: "text-green-400",
   },
   {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    walletAddress: "tz1gUGechhEX6d8Fu4RKytSLSfcJbvNGLwUP",
     position: "LONG",
-    totalPnL: "-40%",
+    totalPnL: "-1.11 %",
+    color: "text-red-400",
   },
   {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
+    walletAddress: "tz1PUrpo9KfUJFuvrJSuAUM5Nx5f8gqJcvki",
     position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "SHORT",
-    totalPnL: "-40%",
-  },
-  {
-    walletAddress: "tz2VENvydo3B3rSxxHHmbnXsG79PdGrwjTYk",
-    position: "LONG",
-    totalPnL: "-40%",
+    totalPnL: "-12.39 %",
+    color: "text-red-400",
   },
 ]
 
@@ -124,7 +69,9 @@ function leaderboard() {
                   <td className="min-w-[70px]">{index + 1}</td>
                   <td className="min-w-[180px]">{entry.walletAddress}</td>
                   {/* <td className="min-w-[110px]">{entry.position}</td> */}
-                  <td className="min-w-[110px]">{entry.totalPnL}</td>
+                  <td className={`min-w-[110px] ${entry.color}`}>
+                    {entry.totalPnL}
+                  </td>
                 </tr>
               ))}
             </tbody>

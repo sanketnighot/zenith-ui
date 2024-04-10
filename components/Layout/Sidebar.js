@@ -42,6 +42,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="tezos.png"
                 alt="tezos"
                 active={router.asPath == "/xtz-usdt"}
+                amount="0.92"
               />
             </Link>
             <Link href={"/btc-usdt"}>
@@ -51,6 +52,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="bitcoin.png"
                 alt="bitcoin"
                 active={router.asPath == "/btc-usdt"}
+                amount="69442.43"
               />
             </Link>
             <Link href={"/eth-usdt"}>
@@ -60,6 +62,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="ethereum.png"
                 alt="ethereum"
                 active={router.asPath == "/eth-usdt"}
+                amount="3540.43"
               />
             </Link>
             <Link href={"/sol-usdt"}>
@@ -69,6 +72,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="solana.png"
                 alt="solana"
                 active={router.asPath == "/sol-usdt"}
+                amount="169.31"
               />
             </Link>
             <Link href={"/matic-usdt"}>
@@ -78,6 +82,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="polygon.png"
                 alt="polygon"
                 active={router.asPath == "/matic-usdt"}
+                amount="0.90"
               />
             </Link>
             <Link href={"/bnb-usdt"}>
@@ -87,6 +92,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="binance.png"
                 alt="binance"
                 active={router.asPath == "/bnb-usdt"}
+                amount="606.22"
               />
             </Link>
             <Link href={"/avax-usdt"}>
@@ -96,6 +102,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
                 icon="avalanche.png"
                 alt="avalanche"
                 active={router.asPath == "/avax-usdt"}
+                amount="48.13"
               />
             </Link>
           </div>
