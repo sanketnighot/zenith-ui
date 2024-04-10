@@ -112,7 +112,7 @@ function Sidebar({ showLong, setShowLong, showShort, setShowShort }) {
           <div className="fixed min-w-[416px] max-w-[416px] text-white bg-sidebar-bg dark:text-black dark:bg-lite-sidebar-bg rounded-r-3xl mt-5 p-10 max-h-[344px] ">
             <div className="flex flex-col h-full gap-10">
               <h3 className="font-semibold text-xl text-center">
-                By adding Long position, you <br /> can earn 350.54 % APR
+                By adding Long position, you <br /> can earn 135.54 % APR
               </h3>
               <div className="flex items-center justify-between">
                 <CardBtn
